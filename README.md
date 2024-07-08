@@ -4,10 +4,10 @@ CCX Goat is a purposely vulnerable application designed for educational purposes
 
 ## Features
 
-[x] Intentionally vulnerable codebase
-[x] Various security vulnerabilities to explore and learn from
-[ ] Step-by-step instructions for fixing vulnerabilities
-[x] Suitable for beginners and experienced developers
+- [x] Intentionally vulnerable codebase
+- [x] Various security vulnerabilities to explore and learn from
+- [ ] Step-by-step instructions for fixing vulnerabilities
+- [x] Suitable for beginners and experienced developers
 
 ## Getting Started
 
