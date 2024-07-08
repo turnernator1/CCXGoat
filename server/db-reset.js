@@ -4,6 +4,7 @@ import User from "./models/User.js";
 import Post from "./models/Post.js"; 
 import {users, posts} from "./data/index.js";
 import dotenv from "dotenv";
+import mongoose from "mongoose";
 
 dotenv.config();
 
