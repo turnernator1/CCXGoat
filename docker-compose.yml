@@ -6,6 +6,7 @@ services:
     environment:
       NODE_ENV:
       MONGO_URL: mongodb://mongo:27017/CCXGoat
+      PORT: 4000
     command: sh -c "until nc -z -w 2 mongo 27017 && echo 'mongo is ready for connections' && node index.js; do sleep 2; done"
     ports:
       - "4000:4000"
