@@ -27,4 +27,4 @@ services:
     image: mongo:4.4
     user: mongodb
     expose:
-      - 27017
+      - "27017:27017"
