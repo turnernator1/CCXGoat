@@ -3,7 +3,7 @@ ENV WORKDIR /usr/src/
 WORKDIR $WORKDIR
 COPY package*.json $WORKDIR
 RUN npm install --production --no-cache
-
+RUN mkdir -p node_modules/.cache && chown -R node:node node_modules/.cache
 FROM node:12-alpine
 ENV USER node
 ENV WORKDIR /home/$USER/app
