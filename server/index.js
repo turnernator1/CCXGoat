@@ -54,13 +54,21 @@ app.use("/auth", authRoutes);
 app.use("/users", userRoutes);
 app.use("/posts", postRoutes);
 
+const resetDB = async () => {
 
+    await User.deleteMany({});
+    await Post.deleteMany({});
+    await User.insertMany(users);
+    await Post.insertMany(posts);
+    console.log("Database has been reset");
+}
 /* DATABASE CONNECTION - MONGOOSE */
 const PORT = process.env.PORT || 6001;
 mongoose.connect(process.env.MONGO_URL, {
     useNewURLParser: true,
     useUnifiedTopology: true,
 }).then(() => {
+    resetDB();
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
 
 
